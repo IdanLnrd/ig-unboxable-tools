@@ -1,0 +1,33 @@
+
+@keyframes sotr-anumate {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+    100% {
+        transform: scale(0.95) rotate(36deg);
+    }
+}
+
+.sotr-animate {
+    animation-name: sotr-anumate;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+.shapes-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.shapes-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
