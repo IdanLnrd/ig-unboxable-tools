@@ -3,6 +3,7 @@ import ShapeOfTheRole from '../Shapes';
 import { schema } from '../Shapes/shapes';
 import { ShapeOfTheRoleLayer } from '../Shapes/types';
 import { useEffect, useState } from 'react';
+import "./shapes-editor.css";
 
 const ShapesEditor: React.FunctionComponent<{ 
     title?: string, storeLocally?: boolean 
@@ -19,7 +20,7 @@ const ShapesEditor: React.FunctionComponent<{
         }
     }, [ data, storeLocally ]);
 
-    return <div>
+    return <div className="shapes-editor">
       <h1>{ title }</h1>
       <ShapeOfTheRole layers={data} />
       <JsonForm 

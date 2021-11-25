@@ -7,16 +7,16 @@ import { JsonForms } from '@jsonforms/react';
 const JsonForm: React.FunctionComponent<{ 
   data: any,
   schema: any, 
-  onChange: (data: any) => void }> = ({ data, onChange, schema }) => {
+  onChange: (data: any, err?: any) => void }> = ({ data, onChange, schema }) => {
     
     return (
-        <div className='App'>
+        <div>
           <JsonForms
             schema={schema}
             data={data}
             renderers={materialRenderers}
             cells={materialCells} 
-            onChange={({ data, errors }) => onChange(data)}
+            onChange={({ data, errors }) => onChange(data, errors)}
           />
         </div>
       );

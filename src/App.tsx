@@ -24,7 +24,9 @@ function App() {
           </Navbar>
           <BrowserRouter>
               <Routes>
-                  <Route path="/shapes" element={<ShapesEditor />} />
+                  <Route path="/shapes" element={<ShapesEditor 
+                    storeLocally={true} />} 
+                  />
               </Routes>
           </BrowserRouter>
     </div>
