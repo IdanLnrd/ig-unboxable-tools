@@ -1,4 +1,4 @@
-export interface ShapeOfTheRoleLayer {
+export interface ShapeLayer {
     motion?: boolean;
     opacity?: number;
     scale?: number;

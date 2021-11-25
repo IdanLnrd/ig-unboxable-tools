@@ -10,11 +10,11 @@ import {
     getShape, 
     transform 
 } from "./shapes";
-import { ShapeOfTheRoleLayer } from './types';
+import { ShapeLayer } from './types';
 
 
 const Shapes: React.FunctionComponent<{ 
-    layers?: ShapeOfTheRoleLayer[],
+    layers?: ShapeLayer[],
     size?: number
 }> = ({ layers = [], size = DEFAULT_SIZE }) => {
     return <div className="shapes-container" 
