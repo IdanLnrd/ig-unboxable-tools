@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^3.51.3",
+    "@blueprintjs/popover2": "^0.12.8",
     "@jsonforms/core": "^2.5.2",
     "@jsonforms/examples": "^2.5.2",
     "@jsonforms/material-renderers": "^2.5.2",

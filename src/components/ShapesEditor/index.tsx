@@ -5,7 +5,7 @@ import { ShapeLayer } from '../Shapes/types';
 import { useEffect, useState } from 'react';
 import "./shapes-editor.css";
 import { useSearchParams } from 'react-router-dom';
-import { Button } from '@blueprintjs/core';
+import { Button, Classes } from '@blueprintjs/core';
 
 const SHAPES_KEY = 'shapes';
 
@@ -45,6 +45,7 @@ const ShapesEditor: React.FunctionComponent<{
     storeLocally?: boolean
 }> = ({ title, storeLocally }) => {
 
+
     const [ search ] = useSearchParams();
     const searchData =  search.get('data') || '';
   
@@ -60,12 +61,25 @@ const ShapesEditor: React.FunctionComponent<{
         return [];
     });
 
-    const share = (data: ShapeLayer[]) => {
+    const getUrl = (data: ShapeLayer[]) => {
         const shareString = convertArrayToSearchParams(data);
         const location = window.location;
-        const url = `${location.origin}${location.pathname}?${SHAPES_KEY}=${shareString}`;
+        return `${location.origin}${location.pathname}?${SHAPES_KEY}=${shareString}`;
+    }
+
+    const share = (data: ShapeLayer[]) => {
+        const url = getUrl(data);
         if(navigator.share) {
             navigator.share( { url });
+        }
+       
+    }
+
+    const copy = async (data: ShapeLayer[]) => {
+        const url = getUrl(data);
+        if(navigator.clipboard) {
+           await navigator.clipboard.writeText(url);
+           alert('url copied!');
         }
        
     }
@@ -78,7 +92,9 @@ const ShapesEditor: React.FunctionComponent<{
     return <div className="shapes-editor">
       <h1>
           { title }
-        <Button text="Share" icon="share" onClick={() => share(data)}/>
+        <Button text="Share" icon="share" onClick={() => share(data)} className={Classes.MINIMAL}/>
+        <Button text="Copy" icon="duplicate" onClick={() => copy(data)} className={Classes.MINIMAL}/>  
+      
       </h1>
       <ShapeOfTheRole layers={data} />
       <JsonForm 
