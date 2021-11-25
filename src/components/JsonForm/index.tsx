@@ -4,7 +4,7 @@ import {
 } from '@jsonforms/material-renderers';
 import { JsonForms } from '@jsonforms/react';
 
-const Editor: React.FunctionComponent<{ 
+const JsonForm: React.FunctionComponent<{ 
   data: any,
   schema: any, 
   onChange: (data: any) => void }> = ({ data, onChange, schema }) => {
@@ -22,4 +22,4 @@ const Editor: React.FunctionComponent<{
       );
 }
 
-export default Editor;
+export default JsonForm;
