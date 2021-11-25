@@ -11,12 +11,12 @@ import {
     transform 
 } from "./shapes";
 import { ShapeOfTheRoleLayer } from './types';
-import { exampleLayers } from './example';
+
 
 const Shapes: React.FunctionComponent<{ 
     layers?: ShapeOfTheRoleLayer[],
     size?: number
-}> = ({ layers = exampleLayers, size = DEFAULT_SIZE }) => {
+}> = ({ layers = [], size = DEFAULT_SIZE }) => {
     return <div className="shapes-container" 
     style={{ width: `${size}px`, height: `${size}px`,}}>
         {

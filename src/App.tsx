@@ -10,23 +10,31 @@ import {
 } from "@blueprintjs/core";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShapesEditor from './components/ShapesEditor';
+import Applications from './pages/applications';
+import Home from './pages/home';
 function App() {
   return (
     <div className="App">
          <Navbar>
               <NavbarGroup align={Alignment.LEFT}>
-                  <NavbarHeading>IG</NavbarHeading>
-                  <NavbarDivider />
+                  <NavbarHeading>
                   <AnchorButton className={Classes.MINIMAL} href="/" icon="home" text="" />
+
+                  </NavbarHeading>
                   <NavbarDivider />
-                  <AnchorButton className={Classes.MINIMAL} href="/shapes" icon="shapes" text="Shapes" />
+                  <AnchorButton 
+                        text="Unboxable" 
+                        href="https://www.unboxable.com" 
+                        target="_blank" icon="cube" className={Classes.MINIMAL} /> 
+                  <NavbarDivider />
+                  <AnchorButton className={Classes.MINIMAL} href="/applications" icon="applications" text="Applications" />
               </NavbarGroup>
           </Navbar>
           <BrowserRouter>
               <Routes>
-                  <Route path="/shapes" element={<ShapesEditor 
-                    storeLocally={true} />} 
-                  />
+                  <Route path="/applications/shapes" element={ <ShapesEditor storeLocally={true} />} />
+                  <Route path="/applications" element={ <Applications/> }/>
+                  <Route path="/" element={<Home/>}/>
               </Routes>
           </BrowserRouter>
     </div>

@@ -33,10 +33,18 @@ const schema: any = {
     "items": {
         "type": "object",
         "properties": {
-            "motion": {"type": "boolean"},
-            "opacity": {"type": "number"},
-            "scale": {"type": "number"},
-            "label": {"type": "string"},
+            "motion": {
+                "type": "boolean"
+            },
+            "opacity": {
+                "type": "number"
+            },
+            "scale": {
+                "type": "number"
+            },
+            "label": {
+                "type": "string"
+            },
             "shape": {
                 "type": "integer",
                 "minimum": 0,

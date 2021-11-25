@@ -1,0 +1,10 @@
+.apps-title {
+    text-align: center;
+    padding: 2rem;
+}
+
+.apps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
