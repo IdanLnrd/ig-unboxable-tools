@@ -7,6 +7,8 @@ import "./shapes-editor.css";
 import { useSearchParams } from 'react-router-dom';
 import { Button } from '@blueprintjs/core';
 
+const SHAPES_KEY = 'shapes';
+
 const convertSearchParamsToArray = (search: string) => {
     const split = search.split('-');
     const result: ShapeLayer[] = [];
@@ -52,7 +54,7 @@ const ShapesEditor: React.FunctionComponent<{
             return dataFromParams;
         }
         if(storeLocally) {
-            const d = JSON.parse(localStorage.getItem('shapes') || "[]");
+            const d = JSON.parse(localStorage.getItem(SHAPES_KEY) || "[]");
             return d;
         }
         return [];
@@ -61,7 +63,7 @@ const ShapesEditor: React.FunctionComponent<{
     const share = (data: ShapeLayer[]) => {
         const shareString = convertArrayToSearchParams(data);
         const location = window.location;
-        const url = `${location.origin}${location.pathname}?${shareString}`;
+        const url = `${location.origin}${location.pathname}?${SHAPES_KEY}=${shareString}`;
         if(navigator.share) {
             navigator.share( { url });
         }
@@ -69,7 +71,7 @@ const ShapesEditor: React.FunctionComponent<{
     }
     useEffect(() => {
         if(storeLocally) {
-            localStorage.setItem('shapes', JSON.stringify(data));
+            localStorage.setItem(SHAPES_KEY, JSON.stringify(data));
         }
     }, [ data, storeLocally ]);
 
