@@ -8,7 +8,6 @@ import { useSearchParams } from 'react-router-dom';
 import { Button, Classes } from '@blueprintjs/core';
 
 const SHAPES_KEY = 'shapes';
-
 const convertSearchParamsToArray = (search: string) => {
     const split = search.split('-');
     const result: ShapeLayer[] = [];
@@ -47,7 +46,7 @@ const ShapesEditor: React.FunctionComponent<{
 
 
     const [ search ] = useSearchParams();
-    const searchData =  search.get('data') || '';
+    const searchData =  search.get(SHAPES_KEY) || '';
   
     const [data, setData] = useState<ShapeLayer[]>(() => {
         const dataFromParams = convertSearchParamsToArray(searchData);
