@@ -64,7 +64,7 @@ const ShapesEditor: React.FunctionComponent<{
     const getUrl = (data: ShapeLayer[]) => {
         const shareString = convertArrayToSearchParams(data);
         const location = window.location;
-        return `${location.origin}${location.pathname}?${SHAPES_KEY}=${shareString}`;
+        return encodeURI(`${location.origin}${location.pathname}?${SHAPES_KEY}=${shareString}`);
     }
 
     const share = (data: ShapeLayer[]) => {
