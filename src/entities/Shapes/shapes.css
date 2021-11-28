@@ -31,3 +31,24 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.shapes-item-container:not(.shape-selected) {
+    visibility: hidden;
+}
+
+.shapes-labels {
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.shapes-labels .shapes-label {
+    position: absolute;
+    text-align: end;
+    cursor: pointer;
+}
+.shapes-labels .shapes-label  span {
+    text-align: center;
+}

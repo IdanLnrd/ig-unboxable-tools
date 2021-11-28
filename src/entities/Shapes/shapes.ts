@@ -1,9 +1,24 @@
 
 const SHAPES_COUNT = 9;
-const DEFAULT_SIZE = 300;
+const DEFAULT_SIZE = 600;
 const DEFAULT_SCALE = 1;
 const DEFAULT_OPACITY = 0.3;
 const ANIM_DELAY = 10000;
+
+const getLabelLocation = (index: number, size: number, count: number) => {
+    const rotation = ((( 360 / count ) * index));
+    return { 
+        transform: `rotate(${rotation}deg)`,
+        transformOrigin: 'center',
+        width: `${size / 1.5}px`
+    };
+}
+const getLabelLocationComp = (index: number, count: number) => {
+    const rotation = ((( 360 / count ) * index));
+    return { 
+        transform: `rotate(-${rotation}deg)`,
+    };
+}
 
 const getShape = (n: number = -1) => {
     if( 0 <= n && n <= (SHAPES_COUNT - 1) ) {
@@ -64,5 +79,7 @@ export {
     getRandomShape,
     getShape,
     getRandomOffset,
+    getLabelLocation,
+    getLabelLocationComp,
     shapesSchema
 }
