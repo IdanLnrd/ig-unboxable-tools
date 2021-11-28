@@ -30,7 +30,7 @@ const Applications: FunctionComponent = () => {
             </Card>
             <Card className="app-item">
                 <AnchorButton 
-                    text="" 
+                    text="Talent Card" 
                     target="_blank"
                     href="/applications/talent_card"
                     icon="user" className={Classes.MINIMAL} /> 
