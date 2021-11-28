@@ -1,11 +1,12 @@
-import JsonForm from '../JsonForm';
-import ShapeOfTheRole from '../Shapes';
-import { schema } from '../Shapes/shapes';
-import { ShapeLayer } from '../Shapes/types';
+
 import { useEffect, useState } from 'react';
 import "./shapes-editor.css";
 import { useSearchParams } from 'react-router-dom';
 import { Button, Classes } from '@blueprintjs/core';
+import { ShapeLayer } from '../../entities/Shapes/types';
+import Shapes from '../../entities/Shapes';
+import JsonForm from '../../entities/JsonForm';
+import { shapesSchema } from '../../entities/Shapes/shapes';
 
 const SHAPES_KEY = 'shapes';
 const convertSearchParamsToArray = (search: string) => {
@@ -95,10 +96,10 @@ const ShapesEditor: React.FunctionComponent<{
         <Button text="Copy" icon="duplicate" onClick={() => copy(data)} className={Classes.MINIMAL}/>  
       
       </h1>
-      <ShapeOfTheRole layers={data} />
+      <Shapes layers={data} />
       <JsonForm 
         data={data} 
-        schema={schema}
+        schema={shapesSchema}
         onChange={setData} />
     </div>
 }

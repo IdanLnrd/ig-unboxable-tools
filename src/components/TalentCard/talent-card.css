@@ -1,0 +1,29 @@
+.talent-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 96px;
+    font-size: 48px;
+    flex-direction: column;
+}
+.talent-text {
+    padding: 18px;
+}
+
+@keyframes building {
+    0% {
+        transform: rotate(-45deg);
+    } 
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+.building-anim {
+    transform-origin: bottom right;
+    animation-name: building;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

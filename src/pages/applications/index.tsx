@@ -28,6 +28,13 @@ const Applications: FunctionComponent = () => {
                     href="https://analytics.staging.lnrd.io"
                     icon="chart" className={Classes.MINIMAL} /> 
             </Card>
+            <Card className="app-item">
+                <AnchorButton 
+                    text="" 
+                    target="_blank"
+                    href="/applications/talent_card"
+                    icon="user" className={Classes.MINIMAL} /> 
+            </Card>
         </div>
     </div>
 }

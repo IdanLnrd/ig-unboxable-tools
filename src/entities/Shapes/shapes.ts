@@ -28,7 +28,7 @@ const transform = () => {
     return `translate(${x}px, ${y}px)`;
 };
 
-const schema: any = {
+const shapesSchema: any = {
     "type": "array",
     "items": {
         "type": "object",
@@ -64,5 +64,5 @@ export {
     getRandomShape,
     getShape,
     getRandomOffset,
-    schema
+    shapesSchema
 }
