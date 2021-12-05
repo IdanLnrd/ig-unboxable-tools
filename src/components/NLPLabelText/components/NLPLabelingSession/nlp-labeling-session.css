@@ -1,0 +1,16 @@
+.nlp-session-viewer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nlp-session-title {
+    text-align: center;
+}
+
+.nlp-session-editor {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}

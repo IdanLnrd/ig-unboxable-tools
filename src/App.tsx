@@ -14,6 +14,8 @@ import Applications from './pages/applications';
 import Home from './pages/home';
 import TalentCard from './components/TalentCard';
 import NLPLabelText from './components/NLPLabelText';
+import NLPLabelingSession from './components/NLPLabelText/components/NLPLabelingSession';
+import NLPSessionsList from './components/NLPLabelText/components/NLPSessionsList';
 function App() {
   return (
     <div className="App">
@@ -36,7 +38,10 @@ function App() {
               <Routes>
                   <Route path="/applications/shapes" element={ <ShapesEditor storeLocally={true} />} />
                   <Route path="/applications/talent_card" element={ <TalentCard />} />
-                  <Route path="/applications/nlp_label_text" element={ <NLPLabelText />} />
+                  <Route path="/applications/nlp_label_text" element={ <NLPLabelText />} >
+                      <Route path="session/:sessionId" element={<NLPLabelingSession/>}/>
+                      <Route path="list" element={<NLPSessionsList/>}/>
+                  </Route>
                   <Route path="/applications" element={ <Applications/> }/>
                   <Route path="/" element={<Home/>}/>
               </Routes>
