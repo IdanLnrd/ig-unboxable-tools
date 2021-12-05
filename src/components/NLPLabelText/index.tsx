@@ -7,6 +7,7 @@ const NLPLabelText: React.FunctionComponent = () => {
 
     return <div className="nlp-container">
         <h1>{texts.title}</h1>
+        
     </div>  
 }
 export default NLPLabelText;
