@@ -1,6 +1,8 @@
 import { INLPLabelingSession } from "../../types";
 
-const NLPSessionViewer: React.FunctionComponent<{ session: INLPLabelingSession }> = ({ session }) => {
+const NLPSessionViewer: React.FunctionComponent<{ 
+    session: INLPLabelingSession 
+}> = ({ session }) => {
     return <div>
         { JSON.stringify(session || '{}') }
     </div>
