@@ -35,6 +35,13 @@ const Applications: FunctionComponent = () => {
                     href="/applications/talent_card"
                     icon="user" className={Classes.MINIMAL} /> 
             </Card>
+            <Card className="app-item">
+                <AnchorButton 
+                    text="NLP label text" 
+                    target="_blank"
+                    href="/applications/nlp_label_text"
+                    icon="user" className={Classes.MINIMAL} /> 
+            </Card>
         </div>
     </div>
 }
