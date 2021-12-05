@@ -1,4 +1,4 @@
-import { Button, Classes } from "@blueprintjs/core";
+// import { Button, Classes } from "@blueprintjs/core";
 import { useState } from "react";
 import { useParams } from "react-router";
 import JsonFormVanilla from "../../../../entities/JsonFormVanilla";
@@ -40,19 +40,21 @@ const NLPLabelingSession = () => {
             <h5 className="nlp-session-title">Session {sessionId}</h5>
         </div>
         <div className="nlp-session-editor">
-            <Button className={Classes.MINIMAL} icon="predictive-analysis" text="Add Insight"/>
+            {/* <Button className={Classes.MINIMAL} icon="predictive-analysis" text="Add Insight"/>
             <Button className={Classes.MINIMAL} icon="new-text-box" text="Add Text"/>
-            <Button className={Classes.MINIMAL} icon="tag" text="Add Tags"/>    
+            <Button className={Classes.MINIMAL} icon="tag" text="Add Tags"/>     */}
+            <div>
+                <JsonFormVanilla 
+                    data={session}
+                    schema={sessionSchema} 
+                    onChange={data => {console.log(data)}}/>
+            </div>
+            <div className="nlp-session-viewer">
+                <NLPSessionViewer session={session}/>
+            </div>
         </div>
-        <div>
-            <JsonFormVanilla 
-                data={session}
-                schema={sessionSchema} 
-                onChange={data => {console.log(data)}}/>
-        </div>
-        <div className="nlp-session-viewer">
-            <NLPSessionViewer session={session}/>
-        </div>
+
+    
     </div>
 }
 
