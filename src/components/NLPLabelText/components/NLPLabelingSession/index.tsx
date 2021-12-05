@@ -36,9 +36,6 @@ const NLPLabelingSession = () => {
     }
 
     return <div>
-        <div className="text-">
-            <h5 className="nlp-session-title">Session {sessionId}</h5>
-        </div>
         <div className="nlp-session-editor">
             {/* <Button className={Classes.MINIMAL} icon="predictive-analysis" text="Add Insight"/>
             <Button className={Classes.MINIMAL} icon="new-text-box" text="Add Text"/>
