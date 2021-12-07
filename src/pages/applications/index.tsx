@@ -30,17 +30,10 @@ const Applications: FunctionComponent = () => {
             </Card>
             <Card className="app-item">
                 <AnchorButton 
-                    text="Talent Card" 
+                    text="communication profile editor" 
                     target="_blank"
-                    href="/applications/talent_card"
-                    icon="user" className={Classes.MINIMAL} /> 
-            </Card>
-            <Card className="app-item">
-                <AnchorButton 
-                    text="NLP label text" 
-                    target="_blank"
-                    href="/applications/nlp_label_text"
-                    icon="user" className={Classes.MINIMAL} /> 
+                    href="/applications/comm_profile_editor"
+                    icon="antenna" className={Classes.MINIMAL} /> 
             </Card>
         </div>
     </div>
