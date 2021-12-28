@@ -30,6 +30,13 @@ const Applications: FunctionComponent = () => {
             </Card>
             <Card className="app-item">
                 <AnchorButton 
+                    text="Data Services" 
+                    target="_blank"
+                    href="https://data-services.staging.lnrd.io"
+                    icon="heatmap" className={Classes.MINIMAL} /> 
+            </Card>
+            <Card className="app-item">
+                <AnchorButton 
                     text="Talent Card" 
                     target="_blank"
                     href="/applications/talent_card"
