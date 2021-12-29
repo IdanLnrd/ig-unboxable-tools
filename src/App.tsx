@@ -12,8 +12,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShapesEditor from './components/ShapesEditor';
 import Applications from './pages/applications';
 import Home from './pages/home';
-import TalentCard from './components/TalentCard';
-import NLPLabelText from './components/NLPLabelText';
 function App() {
   return (
     <div className="App">
@@ -35,8 +33,6 @@ function App() {
           <BrowserRouter>
               <Routes>
                   <Route path="/applications/shapes" element={ <ShapesEditor storeLocally={true} />} />
-                  <Route path="/applications/talent_card" element={ <TalentCard />} />
-                  <Route path="/applications/nlp_label_text" element={ <NLPLabelText />} />
                   <Route path="/applications" element={ <Applications/> }/>
                   <Route path="/" element={<Home/>}/>
               </Routes>

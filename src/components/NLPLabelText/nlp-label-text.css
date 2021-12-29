@@ -1,9 +1,0 @@
-.nlp-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-height: 300px;
-}
