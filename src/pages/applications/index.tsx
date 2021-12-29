@@ -12,7 +12,7 @@ const Applications: FunctionComponent = () => {
                 <AnchorButton 
                     text="Shapes" 
                     href="/applications/shapes"
-                    icon="cube" className={Classes.MINIMAL} /> 
+                    icon="layers" className={Classes.MINIMAL} /> 
             </Card>
             <Card className="app-item">
                 <AnchorButton 
